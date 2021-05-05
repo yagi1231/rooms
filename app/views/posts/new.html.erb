@@ -1,0 +1,27 @@
+    <h3>ルーム情報登録</h3>
+      
+  <%= form_tag("/posts/create") do %>
+     
+      <table>
+       <input name="room" value="<%= @post.room %>">
+       <input name="introduce" value="<%= @post.introduce %>">
+       <input name="address" value="<%= @post.address %>">
+       <input name="fee" value="<%= @post.fee %>">
+        
+        <input name="image" type="file">   
+          
+         
+        
+     
+      </table>
+ 
+      <div>
+        <ul>
+          <input type="submit" value="新規登録">
+          <li><%= link_to "スケジュール一覧に戻る", :posts%></li>
+        </ul>
+      </div>
+    <% end %>
+    
+
+     

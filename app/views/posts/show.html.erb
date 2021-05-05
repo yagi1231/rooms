@@ -1,0 +1,33 @@
+<h3>詳細情報</h3>
+
+<table>
+    <tr>
+        <th>ルーム名</th>
+        <td><%= @post.room%></td>
+    </tr>
+    <tr>
+        <th>ルーム紹介</th>
+        <td><%= @post.introduce%></td>
+    </tr>
+    <tr>
+        <th>金額</th>
+        <td><%= @post.fee%></td>
+    </tr>
+    <tr>
+        <th>住所</th>
+        <td><%= @post.address%></td>
+    </tr>
+    <tr>
+        <th>写真</th>
+          <td><img src="<%= "/post_images/#{@post.image_name}" %>"></td>
+    </tr>
+</table>
+
+<div>
+    <ul>
+    <li><%= link_to "スケジュール一覧に戻る", :posts%></li>
+     <li><%= link_to "編集", [:edit, :post] %></li>
+    <li><%= link_to "削除", :post,method: :delete,data:{confirm:"本当に削除しますか？"} %></li>
+  
+    </ul>
+</div>
